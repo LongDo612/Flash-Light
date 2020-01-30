@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/Battery.js"></script>
+    <script src="js/FlashLamp.js"></script>
+</head>
+<body>
+    <script>
+        let battery = new Battery();
+        battery.setEnergy(100);
+        let flashLight = new FlashLamp();
+        flashLight.setBattery(battery);
+        alert("Battery before used : " + flashLight.getBatteryInfo());
+        alert("Turned on");
+        flashLight.turnOn();
+        flashLight.light();
+        alert("Battery after used : " + flashLight.getBatteryInfo());
+        alert("Turn off");
+        flashLight.turnOff();
+    </script>
+</body>
+</html>
